@@ -1,0 +1,24 @@
+# User-specific stuff:
+.idea
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+### Node ###
+*.log
+npm-debug.log*
+# Dependency directories
+node_modules
+# Optional npm cache directory
+.npm
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+# Folder config file
+Desktop.ini
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+
