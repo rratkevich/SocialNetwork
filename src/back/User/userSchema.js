@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+delete mongoose.connection.models['user'];
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({

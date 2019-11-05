@@ -1,11 +1,11 @@
 const Joi = require('@hapi/joi');
 
-const loginValidation = () => {
+const loginValidation = (data) => {
     const loginSchema = Joi.object({
         email: Joi.string().min(8).required().email(),
-        password: Joi.string().min(6).required
+        password: Joi.string().min(6).required()
     });
-    return loginSchema.validate(loginSchema);
+    return loginSchema.validate(data);
 };
 
 module.exports.loginValidation = loginValidation;
