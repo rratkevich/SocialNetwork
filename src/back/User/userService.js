@@ -4,9 +4,11 @@ class UserService {
     async getAllUsers() {
         return await User.find();
     }
+
     async deleteUser(id) {
-        const deleteUser = await User.deleteOne({ _id: id });
+        const deleteUser = await User.deleteOne({_id: id});
         return deleteUser;
     }
 }
+
 module.exports = UserService;

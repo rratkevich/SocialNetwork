@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const User = require('../userSchema');
-const { registerValidation } = require('./registerValidation');
+const {registerValidation} = require('./registerValidation');
 
 async function registerUser(req, res) {
     // validate data

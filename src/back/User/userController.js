@@ -8,7 +8,8 @@ class UserController {
         const result = await service.getAllUsers();
         res.send(result);
     }
-    async deleteUser(req,res) {
+
+    async deleteUser(req, res) {
         try {
             res.send(await service.deleteUser(req.body));
         } catch (err) {

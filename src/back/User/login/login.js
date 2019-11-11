@@ -2,7 +2,7 @@ const User = require('../userSchema');
 const jwt = require('jsonwebtoken');
 const secret = require('./secret');
 const bcrypt = require('bcrypt');
-const { loginValidation } = require('./loginValidation');
+const {loginValidation} = require('./loginValidation');
 
 async function loginUser(req, res) {
     // validate data
@@ -15,7 +15,7 @@ async function loginUser(req, res) {
 
     if (userExist) {
         jwt.sign({userExist}, secret.secret, {expiresIn: '24h'}, (err, token) => {
-            if (err)  {
+            if (err) {
                 res.send(err.message);
             } else {
                 res.json({token});

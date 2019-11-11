@@ -4,9 +4,9 @@ const secret = require('./secret');
 // Token Schema:
 // Authorization: Bearer <access_token>
 
-const authentication =  (req, res, next) => {
-    const bearerHeader  = req.headers['authorization'];
-    if( typeof bearerHeader  !== 'undefined') {
+const authentication = (req, res, next) => {
+    const bearerHeader = req.headers['authorization'];
+    if (typeof bearerHeader !== 'undefined') {
         const bearer = bearerHeader.split(' ');
         req.token = bearer[1];
 

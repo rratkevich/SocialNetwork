@@ -1,10 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const UserRouter = require('./User/UserRouter');
-
 const app = express();
-app.use(express.json());
+const cors = require('cors')
 
+var corsOptions = {
+    origin: 'http://localhost:4200',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
+app.use(cors(corsOptions));
+
+app.use(express.json());
 app.use('/', UserRouter());
 mongoose
     .connect('mongodb://localhost/app', {
